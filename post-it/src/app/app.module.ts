@@ -7,6 +7,13 @@ import { NotesComponent } from './notes/notes.component';
 import { ModalComponent } from './modal/modal.component';
 import { NavbarComponent } from './navbar/navbar.component';
 import { CreateNoteComponent } from './create-note/create-note.component';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import {MatIconModule} from "@angular/material/icon";
+import {MatFormFieldModule} from "@angular/material/form-field";
+import {MatCardModule} from "@angular/material/card";
+import {ReactiveFormsModule} from "@angular/forms";
+import {MatButtonModule} from "@angular/material/button";
+import {AutosizeModule} from "ngx-autosize";
 
 @NgModule({
   declarations: [
@@ -18,7 +25,14 @@ import { CreateNoteComponent } from './create-note/create-note.component';
     CreateNoteComponent
   ],
   imports: [
-    BrowserModule
+    BrowserModule,
+    BrowserAnimationsModule,
+    MatIconModule,
+    MatFormFieldModule,
+    MatCardModule,
+    ReactiveFormsModule,
+    MatButtonModule,
+    AutosizeModule,
   ],
   providers: [],
   bootstrap: [AppComponent]

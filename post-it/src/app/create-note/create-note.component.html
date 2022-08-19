@@ -1,0 +1,35 @@
+<div class="container">
+  <h1>Post a Note!</h1>
+  <mat-card>
+    <mat-card-content>
+      <form id="create-post-it" [formGroup]="noteForm" (ngSubmit)="addNewNote()">
+        <mat-form-field appearance="fill"
+                        class="create-note-title"
+                        color="accent"
+                        *ngIf="showTitle">
+          <input matInput placeholder="Title" formControlName="title"/>
+        </mat-form-field>
+        <mat-form-field appearance="fill"
+                        color="accent">
+        <textarea matInput
+                  placeholder="Say Hi!..."
+                  (focus)="showTitle = true"
+                  formControlName="content"
+                  class="create-note-textarea" autosize></textarea>
+        </mat-form-field>
+        <div class="options">
+          <div class="spacer"></div>
+          <button type="submit"
+                  [disabled]="canSubmit()" mat-mini-fab
+                  *ngIf="showTitle"
+                  class="submit-button">
+            <mat-icon>add</mat-icon>
+          </button>
+        </div>
+
+      </form>
+    </mat-card-content>
+
+  </mat-card>
+</div>
+
