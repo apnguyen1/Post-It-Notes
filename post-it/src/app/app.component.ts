@@ -1,7 +1,7 @@
 import { Component } from '@angular/core';
 import {MatSnackBar} from "@angular/material/snack-bar";
 import {HttpClient} from "@angular/common/http";
-import {Note} from "../Note";
+import {Note} from "./Note";
 
 @Component({
   selector: 'app-root',

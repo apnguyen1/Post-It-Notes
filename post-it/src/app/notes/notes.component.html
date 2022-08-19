@@ -1,1 +1,16 @@
-<p>notes works!</p>
+<div class="content">
+  <div fxLayout="row wrap" fxLayoutGap="20px grid">
+    <div class="note"
+         fxFlex="20%"
+         fxFlex.xs="100%"
+         fxFlex.sm="33%"
+         *ngFor="let item of notes; let i = index">
+      <app-note [note]="item"
+                (delete)="setNotes($event, i)"></app-note>
+    </div>
+  </div>
+</div>
+
+
+
+
