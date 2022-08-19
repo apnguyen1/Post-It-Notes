@@ -1,1 +1,39 @@
-<p>modal works!</p>
+<div class="container">
+  <h2 mat-dialog-title>Edit</h2>
+  <mat-card mat-dialog-content>
+    <mat-card-content>
+      <form id="edit-post-it">
+        <mat-form-field appearance="fill" color="accent">
+          <mat-label>Title</mat-label>
+          <input matInput
+                 name = "title"
+                 [value]="data.title" #title
+          />
+        </mat-form-field>
+        <mat-form-field appearance="fill" color="accent">
+          <mat-label>Note</mat-label>
+          <textarea matInput
+                    name = "content"
+                    [value]="data.content" #content
+                    class="edit-note-textarea"
+                    autosize></textarea>
+        </mat-form-field>
+        <div class="options">
+          <button type="submit"
+                  mat-mini-fab
+                  class="cancel-changes"
+                  (click)="cancelEdit()">
+            <mat-icon>arrow_back</mat-icon>
+          </button>
+          <div class="spacer"></div>
+          <button type="submit"
+                  mat-mini-fab
+                  class="cancel-changes"
+                  (click)="updateNote(data.id, title.value, content.value)">
+            <mat-icon>edit</mat-icon>
+          </button>
+        </div>
+      </form>
+    </mat-card-content>
+  </mat-card>
+</div>

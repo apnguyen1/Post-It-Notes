@@ -1,4 +1,4 @@
-import {Component, EventEmitter, Output} from '@angular/core';
+import {Component, EventEmitter, Output, ViewEncapsulation} from '@angular/core';
 import {Note} from "../Note";
 import {FormBuilder, FormGroup} from "@angular/forms";
 import {HttpClient} from "@angular/common/http";
@@ -6,11 +6,13 @@ import {HttpClient} from "@angular/common/http";
 @Component({
   selector: 'app-create-note',
   templateUrl: './create-note.component.html',
-  styleUrls: ['./create-note.component.css']
+  styleUrls: ['./create-note.component.css'],
 })
 export class CreateNoteComponent {
+
   constructor(private fb: FormBuilder,
               private httpClient: HttpClient) {}
+
   @Output() newNoteEvent = new EventEmitter<Note>();
 
   showTitle = false;
