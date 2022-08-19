@@ -13,11 +13,11 @@ export class AppComponent {
               private httpClient : HttpClient) {}
 
   ngOnInit() {
-    const url = 'api/loadNotes';
-    // this.fetchNotes(url);
+    const url = '/api/loadNotes';
+    this.fetchNotes(url);
   }
 
-  title = 'post-it';
+  title = 'Post-it';
   notes: Note[] = [];
 
   fetchNotes(url: string) {

@@ -24,7 +24,7 @@ h1 {
 
 mat-card {
   max-width: 250px;
-  padding: 0;
+  padding: 16px;
   margin: 0 auto;
   background-color: lightyellow !important;
 }

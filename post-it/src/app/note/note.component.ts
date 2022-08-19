@@ -16,7 +16,7 @@ export class NoteComponent {
   @Input() note!: Note;
   @Output() delete = new EventEmitter<Note>();
 
-  url = "api/edit-note";
+  url = "/api/edit-note";
 
   openDialog(): void {
     this.dialog.open(ModalComponent, {
