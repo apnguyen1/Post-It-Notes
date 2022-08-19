@@ -14,6 +14,7 @@ import {MatCardModule} from "@angular/material/card";
 import {ReactiveFormsModule} from "@angular/forms";
 import {MatButtonModule} from "@angular/material/button";
 import {AutosizeModule} from "ngx-autosize";
+import {MatToolbarModule} from "@angular/material/toolbar";
 
 @NgModule({
   declarations: [
@@ -33,6 +34,7 @@ import {AutosizeModule} from "ngx-autosize";
     ReactiveFormsModule,
     MatButtonModule,
     AutosizeModule,
+    MatToolbarModule,
   ],
   providers: [],
   bootstrap: [AppComponent]

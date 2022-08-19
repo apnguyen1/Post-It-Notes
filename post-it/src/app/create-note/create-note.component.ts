@@ -14,6 +14,8 @@ export class CreateNoteComponent {
   @Output() newNoteEvent = new EventEmitter<Note>();
 
   showTitle = false;
+  url = "api/add-note";
+
   noteForm: FormGroup = this.fb.group({
     title: null,
     content: null
