@@ -1,0 +1,1 @@
+WOOOOOOOOOOOOOOO, my first mean stack application :). Visit the website, post a note, and maybe even say hi to others!
