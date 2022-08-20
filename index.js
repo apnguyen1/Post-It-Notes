@@ -3,7 +3,7 @@ import express from 'express';
 import cors from 'cors';
 import {router} from "./routes/updateNotes.js";
 
-const port = 5000;
+const port = process.env.PORT || 5000;
 const DB = "mongodb+srv://andrew1767:Andrew1767@notes.o0una4b.mongodb.net/?retryWrites=true&w=majority";
 
 const app = express()
