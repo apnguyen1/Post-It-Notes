@@ -5,7 +5,7 @@
   "type": "module",
   "scripts": {
     "start": "nodemon index.js",
-    "heroku-postbuild": "NPM_CONFIG_PRODUCTION=false npm install --prefix post-it && npm run build --prefix build"
+    "heroku-postbuild": "NPM_CONFIG_PRODUCTION=false npm install --prefix post-it && npm run build --prefix post-it"
   },
   "dependencies": {
     "cors": "^2.8.5",
