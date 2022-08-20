@@ -25,7 +25,6 @@ export class NoteComponent {
     })
       .afterClosed().subscribe(editedNote => {
       if(editedNote !== undefined) {
-        console.log(editedNote);
 
         this.editNote(this.url, editedNote).subscribe((res) => {
           this.note.title = editedNote.title;

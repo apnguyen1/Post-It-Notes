@@ -18,11 +18,10 @@ export class NotesComponent {
   undoUrl = "/api/add-note";
 
   setNotes(newNotes: Note, idx: number) {
+
     this.notes.splice(idx, 1);
 
-    this.deleteNote(this.deleteUrl, newNotes).subscribe(() => {
-      console.log(this.notes);
-    })
+    this.deleteNote(this.deleteUrl, newNotes).subscribe();
 
     this.snackbar.open("You deleted the note titled: " + newNotes.title, "Undo", {
       duration: 5000,
@@ -30,6 +29,7 @@ export class NotesComponent {
       verticalPosition: "bottom"
     }).onAction().subscribe(() => {
       this.deleteNote(this.undoUrl, newNotes).subscribe((res) => {
+        newNotes.id = res._id;
         this.notes.unshift(newNotes);
       });
     });
